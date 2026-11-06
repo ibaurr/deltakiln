@@ -1,0 +1,23 @@
+[package]
+name = "deltakiln-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "deltakiln"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.104"
+clap = { version = "4.6.7", features = ["derive", "cargo"] }
+deltakiln-core = { version = "0.0.1", path = "../deltakiln-core" }
+deltakiln-render = { version = "0.0.1", path = "../deltakiln-render" }
+
+[dev-dependencies]
+tempfile = "3.27.0"
