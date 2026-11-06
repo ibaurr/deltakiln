@@ -1,0 +1,17 @@
+[package]
+name = "deltakiln-content"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+comrak = "0.59.0"
+deltakiln-core = { version = "0.0.1", path = "../deltakiln-core" }
+serde = { version = "1.0.229", features = ["derive"] }
+toml = "1.2.1"
+walkdir = "2.5.0"
