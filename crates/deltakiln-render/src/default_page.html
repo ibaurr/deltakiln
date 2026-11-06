@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">
+{% endif %}</head>
+<body>
+<header><a href="/">{{ site.title }}</a></header>
+<main>
+{{ page.content }}
+</main>
+</body>
+</html>

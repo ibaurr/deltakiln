@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+<article data-source="{{ page.source_path }}">
+{% if page.date %}<time>{{ page.date }}</time>{% endif %}
+{{ page.content }}
+</article>
+{% endblock %}

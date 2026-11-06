@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}WIDE {{ page.title }}{% endblock %}
+{% block body %}
+<section class="wide">
+<p>{{ page.description }}</p>
+<ul>{% for tag in page.extra.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+<p>level={{ page.extra.meta.level }} flag={{ page.extra.meta.flag }}</p>
+{{ page.content }}
+</section>
+{% endblock %}
