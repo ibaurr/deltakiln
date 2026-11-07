@@ -1,8 +1,11 @@
 //! minijinja environment and the template context.
 //!
-//! Design rule (PRD 5.2): a template may read only the page's own data and the
-//! site config. There is deliberately no way to query other pages from here;
-//! cross-page data will arrive as explicit derived nodes (M2).
+//! Design rule: a template may read only the page's own data and the site
+//! config. There is deliberately no way to query other pages from here;
+//! cross-page data (tag lists, recent posts, nav, backlinks) will arrive as
+//! explicit derived nodes (M2). An undeclared global query would let a page
+//! depend on data the incremental build cannot see, and that is how stale
+//! output happens.
 
 use std::path::Path;
 

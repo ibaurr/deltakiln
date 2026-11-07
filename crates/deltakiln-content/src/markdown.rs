@@ -1,7 +1,8 @@
 //! Markdown to HTML via comrak (GFM extensions).
 //!
-//! comrak vs pulldown-cmark is still an open question in the PRD (section 14);
-//! the choice is isolated behind [`render`] so it can be swapped after M4.
+//! comrak vs pulldown-cmark is still an open question: neither has been
+//! benchmarked against the other yet. The choice is isolated behind
+//! [`render`] so it can be swapped after the M4 benchmarks.
 
 use comrak::{Options, markdown_to_html};
 
