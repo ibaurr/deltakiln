@@ -6,7 +6,7 @@ written in Rust.
 The goal is not raw per-file render speed. It is a persisted dependency graph
 plus content-addressed caching, so that editing one file rebuilds only what
 actually changed and everything truly downstream of it, and the result is
-verifiably never stale. See [PRD.md](PRD.md) for the full design.
+verifiably never stale.
 
 ## Status: early development (M0)
 
@@ -16,7 +16,7 @@ full from-scratch build.
 
 That full build is deliberate: it is the correctness oracle that later
 milestones will compare incremental output against. No performance claims are
-made yet. The targets in the PRD are proposals to be validated by a benchmark
+made yet. Any performance targets are proposals to be validated by a benchmark
 harness (milestone M4), not measured results.
 
 | Milestone | Scope | State |
@@ -62,8 +62,8 @@ Output goes to `public/` by default (`--output` to change it).
 - Templates use [minijinja](https://github.com/mitsuhiko/minijinja) syntax
   and can read only the page's own data (`page.*`) and the site config
   (`site.*`).
-- Links are passed through as written. The `@/path/to/page.md` link syntax
-  from the PRD is planned for a later milestone.
+- Links are passed through as written. An `@/path/to/page.md` link syntax
+  with build-time broken-link checking is planned for a later milestone.
 
 ## Development
 

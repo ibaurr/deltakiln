@@ -1,3 +1,7 @@
 /target
 /public
 /.deltakiln
+
+# Local planning/agent files, kept out of the public repo
+/PRD.md
+/CLAUDE.md
